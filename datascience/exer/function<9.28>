@@ -1,0 +1,53 @@
+def my_function(x):
+    return x+1
+
+y=3
+my_function(y)
+
+#method: 클래스 내에 정의된 함수
+
+x=1
+
+class my_class:
+    @staticmethod
+    def my_method(x):
+        return x+1
+    
+cls=my_class()
+
+print(cls.my_method(3))
+
+def check_leap_year(year):
+    if year%4==0:
+        return str(year)+"is a leap year."
+    else:
+        return str(year)+"is a not leap year."
+    
+print(check_leap_year(2021))
+
+result=check_leap_year(2020)
+print(result)
+
+
+def square_point(x,y,z):
+    x_squared=x**2
+    y_squared=y**2
+    z_squared=z**2
+    return x_squared,y_squared, z_squared
+
+three_squared,four_squared,five_squared= square_point(3,4,5)
+
+print(three_squared,four_squared,five_squared)
+
+a="hello"
+def prints_a():
+    print(a)
+prints_a()
+
+a=5 # 전역변수
+
+def f1():
+    (a=2 #지역변수) -> 전역변수를 참조한다
+    print(a)
+#지역변수의 값을 호출함
+
