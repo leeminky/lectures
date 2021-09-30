@@ -70,3 +70,8 @@ print(selected)
 selected=a[(a<5)|(a<3)]
 print(selected)
 
+sclceted=a[(a>6)|(a<4)]
+print(selected)
+
+selected=a[(a>4)&(a<8)]
+print(selected)
