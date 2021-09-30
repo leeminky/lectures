@@ -1,0 +1,72 @@
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+
+lst=[1,2,3,4]
+lst1=[1.5,"string",True]
+
+arr=np.array(lst1)
+print(arr)
+
+arr1=np.array([1,2,3,4])
+print(arr1)
+
+print(arr.dtype)
+#U로 시작하면 여러가지 단위가 셖여있다.
+
+from sys import getsizeof
+
+lst=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+print(getsizeof(lst))
+
+arr=np.array(lst)
+print(getsizeof(arr))
+
+prices=[30,25,40,20,20,35,50,35]
+
+new_prices=[price-5 for price in prices]
+print(new_prices)
+
+prices_arr=np.array(prices)
+prices_arr=prices_arr-5
+print(prices_arr)
+
+test_1=np.array([92,94,88,91,87])
+test_2=np.array([79,100,86,93,91])
+test_3=np.array([87,85,72,90,92])
+
+test_3_fixed=test_3+2
+print(test_3_fixed)
+
+total_grade=test_1+test_2+test_3
+print(total_grade)
+
+final_grade=total_grade /3
+print(final_grade)
+
+jeremy_test_2=test_2[3]
+print(jeremy_test_2)
+
+manual_adwoa_test_1=np.array([test_1[1],test_1[2]])
+print(manual_adwoa_test_1)
+
+student_scores=np.array([test_1,test_2,test_3])
+print(student_scores)
+
+print(student_scores[2][0])
+
+print(student_scores[:,4])
+print(student_scroes[:,-1])
+
+a=np.array([10,2,2,4,5,3,9,8,9,7])
+mask=a>5
+print(mask)
+
+#부분집합 구하기(selection)
+selected=a[a>5]
+print(selected)
+
+#논리식 결합
+selected=a[(a<5)|(a<3)]
+print(selected)
+
